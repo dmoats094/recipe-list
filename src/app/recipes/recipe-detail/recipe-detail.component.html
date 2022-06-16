@@ -1,1 +1,32 @@
-<p>recipe-detail works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid" style="max-height:300px;"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div ngbDropdown class="dropdown">
+      <button ngbDropdownToggle type="button" id="manageRecipeMenu" aria-expanded="false" class="btn btn-primary dropdown-toggle">Manage Recipe</button>
+      <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="manageRecipeMenu">
+        <li><a ngbDropdownItem href="#">Add to Shopping List</a></li>
+        <li><a ngbDropdownItem href="#">Edit Recipe</a></li>
+        <li><a ngbDropdownItem href="#">Delete Recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ recipe.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Ingredients
+  </div>
+</div>

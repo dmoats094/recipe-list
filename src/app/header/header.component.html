@@ -6,15 +6,15 @@
     </button>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shopping List</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
       </ul>
       <ul class="navbar-nav navbar-right">
-        <li class="nav-item dropdown">
-          <a href="#" id="menudropdown1" role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage</a>
-          <ul class="dropdown-menu" aria-labelledby="menudropdown1">
-            <li><a class="dropdown-item" href="#">Save Data</a></li>
-            <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+        <li class="nav-item dropdown" ngbDropdown display="dynamic" placement="bottom-end">
+          <a ngbDropdownToggle href="#" id="menudropdown1" role="button" class="nav-link dropdown-toggle" aria-expanded="false">Manage</a>
+          <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="menudropdown1">
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Save Data</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Fetch Data</a></li>
           </ul>
         </li>
       </ul>
